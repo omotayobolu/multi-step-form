@@ -1,7 +1,7 @@
 import React from "react";
 
 const Personal = () => {
-  return <div>Personal</div>;
+  return <div className="">Personal</div>;
 };
 
 export default Personal;

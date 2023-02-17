@@ -18,8 +18,8 @@ module.exports = {
         Alabaster: "hsl(231, 100%, 99%)",
         White: "hsl(0, 0%, 100%)",
       },
-      fontSize: {
-        // base: "16px",
+      backgroundImage: {
+        SideBgDesktop: "url('/src/assets/images/bg-sidebar-desktop.svg')",
       },
     },
   },
