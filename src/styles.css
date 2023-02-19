@@ -22,12 +22,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
   }
 
   html,
   body {
     background-color: white;
-    height: 100%;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-Marine_blue;
+  }
+
+  p {
+    @apply text-lg font-normal;
   }
 
   @layer components {
