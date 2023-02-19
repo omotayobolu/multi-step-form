@@ -10,7 +10,7 @@ const Input = (props) => {
         type={props.type}
         id={props.id}
         placeholder={props.placeholder}
-        className="py-2 px-4 border text-Marine_blue font-medium text-lg border-Cool_gray rounded-lg focus:border-Purplish_blue"
+        className="py-2 px-4 border text-Marine_blue font-medium text-lg border-Light_gray rounded-lg focus:border-Purplish_blue"
       />
     </div>
   );

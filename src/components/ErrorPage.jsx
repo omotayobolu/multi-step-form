@@ -1,4 +1,5 @@
-import { useRouteError } from "react-router-dom";
+import { useRouteError, Link } from "react-router-dom";
+import PrimaryBtn from "./UI/PrimaryBtn";
 
 const ErrorPage = () => {
   const error = useRouteError();
@@ -7,7 +8,7 @@ const ErrorPage = () => {
   return (
     <div
       id="error-page"
-      className="flex flex-col items-center justify-center h-[100vh]"
+      className="w-full flex flex-col items-center justify-center gap-4 h-[100vh]"
     >
       <h1
         className="text-3xl font-bold
@@ -19,6 +20,9 @@ const ErrorPage = () => {
       <p>
         <i>{error.message || error.statusText}</i>
       </p>
+      <Link to="/">
+        <PrimaryBtn className="relative mt-12">Go Back</PrimaryBtn>
+      </Link>
     </div>
   );
 };

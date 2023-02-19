@@ -5,8 +5,8 @@ import PrimaryBtn from "./UI/PrimaryBtn";
 
 const Personal = () => {
   return (
-    <section id="personal" className=" ">
-      <div className="">
+    <section id="personal">
+      <div>
         <h1>Personal info</h1>
         <p className="pt-2 text-Cool_gray">
           Please provide your name, email address and phone number.
@@ -31,7 +31,7 @@ const Personal = () => {
             placeholder="e.g. +1 234 567"
           />
         </form>
-        <Link to="plans">
+        <Link to="/plans">
           <PrimaryBtn>Next Step</PrimaryBtn>
         </Link>
       </div>

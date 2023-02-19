@@ -5,17 +5,17 @@
   @font-face {
     font-family: "Ubuntu";
     font-weight: bold;
-    src: local("Ubuntu"), url(./assets/fonts/Ubuntu-Bold.ttf) format("ttf");
+    src: local("Ubuntu"), url("./assets/fonts/Ubuntu-Bold.ttf") format("ttf");
   }
   @font-face {
     font-family: "Ubuntu";
     font-weight: normal;
-    src: local("Ubuntu"), url(./assets/fonts/Ubuntu-Regular.ttf) format("ttf");
+    src: local("Ubuntu"), url("./assets/fonts/Ubuntu-Regular.ttf") format("ttf");
   }
   @font-face {
     font-family: "Ubuntu";
     font-weight: medium;
-    src: local("Ubuntu"), url(./assets/fonts/Ubuntu-Medium.ttf) format("ttf");
+    src: local("Ubuntu"), url("./assets/fonts/Ubuntu-Medium.ttf") format("ttf");
   }
 
   * {
@@ -28,10 +28,19 @@
   html,
   body {
     background-color: white;
+    font-style: Ubuntu;
   }
 
   h1 {
     @apply text-4xl font-bold text-Marine_blue;
+  }
+
+  h2 {
+    @apply text-xl font-bold text-Marine_blue;
+  }
+
+  h5 {
+    @apply text-base font-medium text-Marine_blue;
   }
 
   p {
@@ -56,7 +65,11 @@
     }
 
     .link h3 {
-      @apply text-white uppercase font-bold tracking-wide;
+      @apply text-white uppercase font-medium tracking-wide;
+    }
+
+    .select-plan {
+      @apply text-left rounded-lg p-4 border border-Light_gray w-full focus:border-Purplish_blue focus:bg-Alabaster;
     }
   }
 }
