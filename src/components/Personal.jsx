@@ -8,7 +8,7 @@ const Personal = () => {
     <section id="personal">
       <div>
         <h1>Personal info</h1>
-        <p className="pt-2 text-Cool_gray">
+        <p className="pt-3">
           Please provide your name, email address and phone number.
         </p>
         <form className="mt-10 flex flex-col gap-4">

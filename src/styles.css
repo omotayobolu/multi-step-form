@@ -44,7 +44,7 @@
   }
 
   p {
-    @apply text-lg font-normal;
+    @apply text-lg font-normal text-Cool_gray text-base;
   }
 
   input[type="checkbox"] {
@@ -83,6 +83,10 @@
 
   .add-ons {
     @apply border border-Light_gray rounded-lg w-full flex flex-row items-center justify-between p-6 cursor-pointer focus:border-Purplish_blue focus:bg-Alabaster;
+  }
+
+  #summary h3 {
+    @apply font-bold text-Marine_blue text-lg;
   }
 }
 @tailwind utilities;

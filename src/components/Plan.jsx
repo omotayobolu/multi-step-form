@@ -11,7 +11,7 @@ const Plan = () => {
     <section id="plans">
       <div>
         <h1>Select your plan</h1>
-        <p className="text-Cool_gray pt-3">
+        <p className="pt-3">
           You have the option of monthly or yearly billing.
         </p>
         <div className="mt-12 flex flex-row gap-8">
