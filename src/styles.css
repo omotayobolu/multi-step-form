@@ -47,30 +47,42 @@
     @apply text-lg font-normal;
   }
 
-  @layer components {
-    .link {
-      @apply flex flex-row items-center gap-4;
-    }
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    @apply h-5 w-5 cursor-pointer border border-Light_gray rounded-md;
+  }
 
-    .link.active span {
-      @apply text-Marine_blue bg-Light_blue border-none;
-    }
+  input[type="checkbox"]:checked {
+    @apply bg-tick bg-Purplish_blue bg-no-repeat bg-center bg-contain  bg-blend-normal;
+  }
+}
+@layer components {
+  .link {
+    @apply flex flex-row items-center gap-4;
+  }
 
-    .link span {
-      @apply text-white border border-white px-3 py-1 font-bold text-lg rounded-[50%];
-    }
+  .link.active span {
+    @apply text-Marine_blue bg-Light_blue border-none;
+  }
 
-    .link h4 {
-      @apply text-Light_gray uppercase text-base;
-    }
+  .link span {
+    @apply text-white border border-white px-3 py-1 font-bold text-lg rounded-[50%];
+  }
 
-    .link h3 {
-      @apply text-white uppercase font-medium tracking-wide;
-    }
+  .link h4 {
+    @apply text-Light_gray uppercase text-base;
+  }
 
-    .select-plan {
-      @apply text-left rounded-lg p-4 border border-Light_gray w-full focus:border-Purplish_blue focus:bg-Alabaster;
-    }
+  .link h3 {
+    @apply text-white uppercase font-medium tracking-wide;
+  }
+
+  .select-plan {
+    @apply text-left rounded-lg p-4 border border-Light_gray w-full focus:border-Purplish_blue focus:bg-Alabaster cursor-pointer;
+  }
+
+  .add-ons {
+    @apply border border-Light_gray rounded-lg w-full flex flex-row items-center justify-between p-6 cursor-pointer focus:border-Purplish_blue focus:bg-Alabaster;
   }
 }
 @tailwind utilities;
