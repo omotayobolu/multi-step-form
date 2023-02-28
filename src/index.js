@@ -12,6 +12,7 @@ import "./styles.css";
 import Plan from "./components/Plan";
 import AddOns from "./components/Add_ons";
 import Summary from "./components/Summary";
+import { FormProvider } from "./store/FormContext";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,8 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <FormProvider>
+      <RouterProvider router={router} />
+    </FormProvider>
   </React.StrictMode>
 );

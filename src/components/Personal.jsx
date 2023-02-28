@@ -92,7 +92,8 @@ const Personal = () => {
             onChange={numberChangeHandler}
             onBlur={numberBlurHandler}
             error={numberInputError}
-            placeholder="e.g. +1 234 567"
+            pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+            placeholder="e.g. +1 234 567 890"
           />
           <Link to="/plans">
             <PrimaryBtn disabled={!formIsValid}>Next Step</PrimaryBtn>

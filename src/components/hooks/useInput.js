@@ -28,8 +28,6 @@ const useInput = (validateValue) => {
     inputBlurHandler,
     reset,
   };
-
-  return <div>useInput</div>;
 };
 
 export default useInput;
