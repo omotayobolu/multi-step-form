@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const FormContext = createContext({});
 
 export const FormProvider = (props) => {
-  const [option, setOption] = useState(true); //if true- monthly , false - yearly
+  const [option, setOption] = useState(false); //if false- slider will be close monthly , true - slider will be close to yearly
 
   const changeOption = () => {
     setOption((prevOption) => !prevOption);

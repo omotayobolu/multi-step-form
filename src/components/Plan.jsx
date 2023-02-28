@@ -21,30 +21,32 @@ const Plan = () => {
             <img src={Arcade} alt="" />
             <div className="mt-12 flex flex-col gap-1">
               <h2>Arcade</h2>
-              <span>$90/yr</span>
-              {option && <h5>2 months free</h5>}
+              <span>{option ? "$9/mo" : "$90/yr"}</span>
+              {!option && <h5>2 months free</h5>}
             </div>
           </button>
           <button className="select-plan">
             <img src={Advanced} alt="" />
             <div className="mt-12 flex flex-col gap-1">
               <h2>Advanced</h2>
-              <span>$120/yr</span>
-              {option && <h5>2 months free</h5>}
+              <span>{option ? "$12/mo" : "$120/yr"}</span>
+              {!option && <h5>2 months free</h5>}
             </div>
           </button>
           <button className="select-plan">
             <img src={Pro} alt="" />
             <div className="mt-12 flex flex-col gap-1">
               <h2>Pro</h2>
-              <span>$150/yr</span>
-              {option && <h5>2 months free</h5>}
+              <span>{option ? "$15/mo" : "$150/yr"}</span>
+              {!option && <h5>2 months free</h5>}
             </div>
           </button>
         </div>
         <div className="w-full bg-Alabaster py-4 rounded-md flex flex-row gap-8 justify-center items-center mt-12">
           <h2
-            className={`cursor-pointer ${option && "text-Cool_gray"}`}
+            className={`cursor-pointer ${
+              option ? "text-Marine_blue" : "text-Cool_gray"
+            }`}
             onClick={changeOption}
           >
             Monthly
@@ -52,15 +54,15 @@ const Plan = () => {
 
           <div
             className={`w-[40px] h-[20px] bg-Marine_blue flex  
-            ${!option ? "justify-start" : "justify-end"}
+            ${option ? "justify-start" : "justify-end"}
              items-center cursor-pointer rounded-full p-1`}
             onClick={changeOption}
           >
             <div className="bg-white rounded-[50%] h-[13px] w-[13px]"></div>
           </div>
           <h2
-            className={`text-Cool_gray ${
-              option && "text-Marine_blue"
+            className={` ${
+              option ? "text-Cool_gray" : "text-Marine_blue"
             } cursor-pointer`}
             onClick={changeOption}
           >
