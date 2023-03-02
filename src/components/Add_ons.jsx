@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import FormContext from "../store/FormContext";
 import PrimaryBtn from "./UI/PrimaryBtn";
 import SecondaryBtn from "./UI/SecondaryBtn";
 
 const Add_ons = () => {
+  const { option } = useContext(FormContext);
   return (
     <section id="add_ons">
       <div>
@@ -12,27 +14,33 @@ const Add_ons = () => {
         <div className="mt-8 flex flex-col gap-4">
           <div className="add-ons">
             <input type="checkbox" id="" />
-            <label className="flex flex-col gap-1 text-left">
+            <label className="flex flex-col gap-1">
               <h2>Online Service</h2>
-              <p className="text-base">Access to multiplayer games.</p>
+              <p>Access to multiplayer games.</p>
             </label>
-            <h5 className="text-Purplish_blue">+$1/mo</h5>
+            <h5 className="text-Purplish_blue">
+              {option ? "+$1/mo" : "$10/yr"}
+            </h5>
           </div>
           <div className="add-ons">
             <input type="checkbox" id="" />
-            <label className="flex flex-col gap-1 text-left">
+            <label className="flex flex-col gap-1">
               <h2>Larger Storage</h2>
-              <p className="text-base">Extra 1TB of cloud save.</p>
+              <p>Extra 1TB of cloud save.</p>
             </label>
-            <h5 className="text-Purplish_blue">+$2/mo</h5>
+            <h5 className="text-Purplish_blue">
+              {option ? "+$2/mo" : "$20/yr"}
+            </h5>
           </div>
           <div className="add-ons">
             <input type="checkbox" id="" />
-            <label className="flex flex-col gap-1 text-left">
+            <label className="flex flex-col gap-1">
               <h2>Customizable Profile</h2>
-              <p className="text-base">Customize on your profile.</p>
+              <p>Customize on your profile.</p>
             </label>
-            <h5 className="text-Purplish_blue">+$2/mo</h5>
+            <h5 className="text-Purplish_blue">
+              {option ? "+$2/mo" : "$20/yr"}
+            </h5>
           </div>
         </div>
         <div className="flex flex-row justify-between">

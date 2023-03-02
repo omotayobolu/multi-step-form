@@ -3,7 +3,8 @@ import { createContext, useState } from "react";
 const FormContext = createContext({});
 
 export const FormProvider = (props) => {
-  const [option, setOption] = useState(false); //if false- slider will be close monthly , true - slider will be close to yearly
+  const [option, setOption] = useState(false); //if false- monthly , true - yearly
+  const [plan, setPlan] = useState(""); //arcade, advanced, pro
 
   const changeOption = () => {
     setOption((prevOption) => !prevOption);
@@ -11,7 +12,7 @@ export const FormProvider = (props) => {
   };
 
   return (
-    <FormContext.Provider value={{ option, changeOption }}>
+    <FormContext.Provider value={{ option, changeOption, plan, setPlan }}>
       {props.children}
     </FormContext.Provider>
   );

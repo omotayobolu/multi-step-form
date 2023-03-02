@@ -86,7 +86,11 @@
   }
 
   .add-ons {
-    @apply border border-Light_gray rounded-lg w-full flex flex-row items-center justify-between p-6 cursor-pointer focus:border-Purplish_blue focus:bg-Alabaster;
+    @apply border border-Light_gray rounded-lg w-full flex flex-row items-center justify-between p-6 cursor-pointer;
+  }
+
+  .add-ons p {
+    @apply text-lg;
   }
 
   #summary h3 {

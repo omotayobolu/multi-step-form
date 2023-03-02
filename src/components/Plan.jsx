@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import Arcade from "../assets/images/icon-arcade.svg";
-import Advanced from "../assets/images/icon-advanced.svg";
-import Pro from "../assets/images/icon-pro.svg";
 import SecondaryBtn from "./UI/SecondaryBtn";
 import PrimaryBtn from "./UI/PrimaryBtn";
 import FormContext from "../store/FormContext";
+
+import PlansData from "../data/PlansData";
 
 const Plan = () => {
   const { option, changeOption } = useContext(FormContext);
@@ -17,30 +16,16 @@ const Plan = () => {
           You have the option of monthly or yearly billing.
         </p>
         <div className="mt-12 flex flex-row gap-8">
-          <button className="select-plan">
-            <img src={Arcade} alt="" />
-            <div className="mt-12 flex flex-col gap-1">
-              <h2>Arcade</h2>
-              <span>{option ? "$9/mo" : "$90/yr"}</span>
-              {!option && <h5>2 months free</h5>}
-            </div>
-          </button>
-          <button className="select-plan">
-            <img src={Advanced} alt="" />
-            <div className="mt-12 flex flex-col gap-1">
-              <h2>Advanced</h2>
-              <span>{option ? "$12/mo" : "$120/yr"}</span>
-              {!option && <h5>2 months free</h5>}
-            </div>
-          </button>
-          <button className="select-plan">
-            <img src={Pro} alt="" />
-            <div className="mt-12 flex flex-col gap-1">
-              <h2>Pro</h2>
-              <span>{option ? "$15/mo" : "$150/yr"}</span>
-              {!option && <h5>2 months free</h5>}
-            </div>
-          </button>
+          {PlansData.map((plan) => (
+            <button className="select-plan" id={plan.id}>
+              <img src={plan.image} alt="" />
+              <div className="mt-12 flex flex-col gap-1">
+                <h2>{plan.name}</h2>
+                <span>{option ? plan.PricePerMo : plan.PricePerYr}</span>
+                {!option && <h5>2 months free</h5>}
+              </div>
+            </button>
+          ))}
         </div>
         <div className="w-full bg-Alabaster py-4 rounded-md flex flex-row gap-8 justify-center items-center mt-12">
           <h2
