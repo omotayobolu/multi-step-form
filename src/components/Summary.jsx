@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import FormContext from "../store/FormContext";
 import PrimaryBtn from "./UI/PrimaryBtn";
 import SecondaryBtn from "./UI/SecondaryBtn";
 
 const Summary = () => {
+  const { option, selectedPlan, changeOption } = useContext(FormContext);
+
   return (
     <section id="summary">
       <div>
@@ -14,10 +17,17 @@ const Summary = () => {
         <div className="mt-12 bg-Alabaster p-6">
           <div className="flex flex-row items-center justify-between">
             <div className="flex flex-col">
-              <h2>Arcade(Monthly)</h2>
-              <span className="text-Cool_gray underline">Change</span>
+              <h2>
+                {selectedPlan} ({option ? "Monthly" : "Yearly"})
+              </h2>
+              <span
+                className="text-Cool_gray underline cursor-pointer"
+                onClick={changeOption}
+              >
+                Change
+              </span>
             </div>
-            <h3>$9/mo</h3>
+            <h3></h3>
           </div>
           <hr className="my-8" />
           <div className="flex flex-col gap-4">
@@ -32,7 +42,9 @@ const Summary = () => {
           </div>
         </div>
         <div className="mt-12 flex flex-row items-center justify-between">
-          <span className="text-lg text-Cool_gray">Total(per month)</span>
+          <span className="text-lg text-Cool_gray">
+            Total({option ? "per month" : "per year"})
+          </span>
           <h1 className="text-Purplish_blue text-3xl">+$12/mo</h1>
         </div>
         <div className="flex flex-row justify-between">
@@ -40,7 +52,7 @@ const Summary = () => {
             <SecondaryBtn>Go Back</SecondaryBtn>
           </Link>
           <Link to="/summary">
-            <PrimaryBtn>Next Step</PrimaryBtn>
+            <PrimaryBtn disabled={!selectedPlan}>Confirm</PrimaryBtn>
           </Link>
         </div>
       </div>

@@ -4,7 +4,7 @@ const FormContext = createContext({});
 
 export const FormProvider = (props) => {
   const [option, setOption] = useState(false); //if false- monthly , true - yearly
-  const [plan, setPlan] = useState(""); //arcade, advanced, pro
+  const [selectedPlan, setSelectedPlan] = useState(""); //arcade, advanced, pro
 
   const changeOption = () => {
     setOption((prevOption) => !prevOption);
@@ -12,7 +12,9 @@ export const FormProvider = (props) => {
   };
 
   return (
-    <FormContext.Provider value={{ option, changeOption, plan, setPlan }}>
+    <FormContext.Provider
+      value={{ option, changeOption, selectedPlan, setSelectedPlan }}
+    >
       {props.children}
     </FormContext.Provider>
   );
