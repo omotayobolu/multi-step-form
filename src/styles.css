@@ -78,7 +78,7 @@
   }
 
   .select-plan {
-    @apply text-left rounded-lg p-4 border border-Light_gray w-full cursor-pointer focus:border-Purplish_blue focus:bg-Magnolia;
+    @apply text-left rounded-lg p-4 border border-Light_gray bg-transparent w-full cursor-pointer focus:border-Purplish_blue focus:bg-Magnolia;
   }
 
   .select-plan span {

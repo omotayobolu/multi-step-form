@@ -11,9 +11,9 @@ const Plan = () => {
   const { option, changeOption, selectedPlan, setSelectedPlan } =
     useContext(FormContext);
 
-  const planSelectionHandler = (plan) => {
-    setSelectedPlan(plan);
-    console.log(plan);
+  const planSelectionHandler = (plan, price) => {
+    setSelectedPlan(plan, price);
+    console.log(plan, price);
   };
 
   return (
@@ -26,7 +26,7 @@ const Plan = () => {
         <div className="mt-12 flex flex-row gap-8">
           <button
             className="select-plan"
-            onClick={() => planSelectionHandler("Arcade")}
+            onClick={() => planSelectionHandler(["Arcade", 9])}
           >
             <img src={Arcade} alt="" />
             <div className="mt-12 flex flex-col gap-1">
@@ -37,7 +37,7 @@ const Plan = () => {
           </button>
           <button
             className="select-plan"
-            onClick={() => planSelectionHandler("Advanced")}
+            onClick={() => planSelectionHandler(["Advanced", 12])}
           >
             <img src={Advanced} alt="" />
             <div className="mt-12 flex flex-col gap-1">
@@ -48,7 +48,7 @@ const Plan = () => {
           </button>
           <button
             className="select-plan"
-            onClick={() => planSelectionHandler("Pro")}
+            onClick={() => planSelectionHandler(["Pro", 15])}
           >
             <img src={Pro} alt="" />
             <div className="mt-12 flex flex-col gap-1">
