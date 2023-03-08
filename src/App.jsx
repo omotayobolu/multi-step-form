@@ -4,8 +4,11 @@ import { Outlet, NavLink } from "react-router-dom";
 const App = () => {
   return (
     <section className="p-[1%] flex flex-row items-start h-screen">
-      <div id="sidebar" className="w-[50%] h-full">
-        <div className="bg-SideBgDesktop bg-no-repeat bg-cover bg-left w-full h-full">
+      <div
+        id="sidebar"
+        className="w-[50%] h-full bg-SideBgDesktop bg-no-repeat bg-contain bg-left"
+      >
+        <div className=" w-full h-full">
           <nav className="p-[7%]">
             <ul className="flex flex-col gap-10">
               <li>

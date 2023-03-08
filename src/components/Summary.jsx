@@ -103,7 +103,12 @@ const Summary = () => {
             <SecondaryBtn>Go Back</SecondaryBtn>
           </Link>
           <Link to="/summary">
-            <PrimaryBtn disabled={!selectedPlan}>Confirm</PrimaryBtn>
+            <PrimaryBtn
+              disabled={!selectedPlan}
+              className="bg-Purplish_blue rounded-md hover:opacity-80"
+            >
+              Confirm
+            </PrimaryBtn>
           </Link>
         </div>
       </div>
