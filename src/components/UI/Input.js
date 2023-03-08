@@ -8,7 +8,9 @@ const Input = (props) => {
           {props.label}
         </label>
         {props.error && (
-          <p className="text-Strawberry_red">This field is required</p>
+          <p className="text-Strawberry_red text-base font-medium">
+            This field is required
+          </p>
         )}
       </div>
       <input

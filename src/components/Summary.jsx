@@ -5,9 +5,27 @@ import PrimaryBtn from "./UI/PrimaryBtn";
 import SecondaryBtn from "./UI/SecondaryBtn";
 
 const Summary = () => {
-  const { option, selectedPlan, changeOption } = useContext(FormContext);
+  const {
+    option,
+    selectedPlan,
+    changeOption,
+    onlineServiceChecked,
+    largerStorageChecked,
+    customizableProfileChecked,
+  } = useContext(FormContext);
 
-  const total = option ? selectedPlan[1] : selectedPlan[1] * 10;
+  const onlineService = { name: "Online Service", price: option ? 1 : 10 };
+  const largerStorage = { name: "Larger Storage", price: option ? 2 : 20 };
+  const customizableProfile = {
+    name: "Customizable Profile",
+    price: option ? 2 : 20,
+  };
+
+  const total =
+    (option ? selectedPlan[1] : selectedPlan[1] * 10) +
+    (onlineServiceChecked && onlineService.price) +
+    (largerStorageChecked && largerStorage.price) +
+    (customizableProfileChecked && customizableProfile.price);
 
   return (
     <section id="summary">
@@ -36,15 +54,42 @@ const Summary = () => {
           </div>
           <hr className="my-8" />
           <div className="flex flex-col gap-4">
-            <div className="flex flex-row justify-between items-center">
-              <span className="text-lg font-medium text-Cool_gray">
-                Online Service
-              </span>
-              <h5>+$1/mo</h5>
-            </div>
+            {onlineServiceChecked && (
+              <div className="flex flex-row justify-between items-center">
+                <span className="text-lg font-medium text-Cool_gray">
+                  {onlineService.name}
+                </span>
+                <h5>
+                  +${onlineService.price}
+                  {option ? "/mo" : "/yr"}
+                </h5>
+              </div>
+            )}
+            {largerStorageChecked && (
+              <div className="flex flex-row justify-between items-center">
+                <span className="text-lg font-medium text-Cool_gray">
+                  {largerStorage.name}
+                </span>
+                <h5>
+                  +${largerStorage.price}
+                  {option ? "/mo" : "/yr"}
+                </h5>
+              </div>
+            )}
+            {customizableProfileChecked && (
+              <div className="flex flex-row justify-between items-center">
+                <span className="text-lg font-medium text-Cool_gray">
+                  {customizableProfile.name}
+                </span>
+                <h5>
+                  +${customizableProfile.price}
+                  {option ? "/mo" : "/yr"}
+                </h5>
+              </div>
+            )}
           </div>
         </div>
-        <div className="mt-6 px-6 flex flex-row items-center justify-between">
+        <div className="mt-4 px-6 flex flex-row items-center justify-between">
           <span className="text-lg text-Cool_gray font-medium">
             Total({option ? "per month" : "per year"})
           </span>
