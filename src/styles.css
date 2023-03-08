@@ -90,7 +90,7 @@
   }
 
   .add-ons p {
-    @apply text-lg;
+    @apply text-lg font-normal;
   }
 
   #summary h3 {

@@ -7,7 +7,7 @@ import SecondaryBtn from "./UI/SecondaryBtn";
 const Summary = () => {
   const { option, selectedPlan, changeOption } = useContext(FormContext);
 
-  const total = selectedPlan[1];
+  const total = option ? selectedPlan[1] : selectedPlan[1] * 10;
 
   return (
     <section id="summary">
@@ -37,17 +37,15 @@ const Summary = () => {
           <hr className="my-8" />
           <div className="flex flex-col gap-4">
             <div className="flex flex-row justify-between items-center">
-              <span className="text-lg text-Cool_gray">Online Service</span>
+              <span className="text-lg font-medium text-Cool_gray">
+                Online Service
+              </span>
               <h5>+$1/mo</h5>
-            </div>
-            <div className="flex flex-row items-center justify-between">
-              <span className="text-lg text-Cool_gray">Larger Storage</span>
-              <h5>+$2/mo</h5>
             </div>
           </div>
         </div>
         <div className="mt-6 px-6 flex flex-row items-center justify-between">
-          <span className="text-lg text-Cool_gray">
+          <span className="text-lg text-Cool_gray font-medium">
             Total({option ? "per month" : "per year"})
           </span>
           <h1 className="text-Purplish_blue text-3xl">
