@@ -90,7 +90,9 @@ const Plan = () => {
             <SecondaryBtn>Go Back</SecondaryBtn>
           </Link>
           <Link to="/add-ons">
-            <PrimaryBtn disabled={!selectedPlan}>Next Step</PrimaryBtn>
+            <PrimaryBtn disabled={selectedPlan.length === 0}>
+              Next Step
+            </PrimaryBtn>
           </Link>
         </div>
       </div>

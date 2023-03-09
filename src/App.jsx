@@ -3,7 +3,7 @@ import { Outlet, NavLink } from "react-router-dom";
 
 const App = () => {
   return (
-    <section className="p-[1%] flex flex-row items-start h-screen">
+    <section className="bg-white p-[1%] flex flex-row items-start h-screen">
       <div
         id="sidebar"
         className="w-[50%] h-full bg-SideBgDesktop bg-no-repeat bg-contain bg-left"
