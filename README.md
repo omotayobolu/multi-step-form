@@ -49,7 +49,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [live site URL](multi-step-form-omotayo.netlify.app)
+- Live Site URL: [live site URL](https://multi-step-form-omotayo.netlify.app/personal)
 
 ## My process
 
