@@ -18,18 +18,18 @@ const Plan = () => {
 
   return (
     <section id="plans">
-      <div>
+      <div className="bg-white drop-shadow-2xl lg:drop-shadow-none lg:m-0 lg:p-0  md:mt-[-40%] mt-[-5%] mx-[4%] p-[5%] rounded-lg z-10">
         <h1>Select your plan</h1>
         <p className="pt-3">
           You have the option of monthly or yearly billing.
         </p>
-        <div className="mt-12 flex flex-row gap-8">
+        <div className="mt-12 flex md:flex-row flex-col md:gap-8 gap-4">
           <button
             className="select-plan"
             onClick={() => planSelectionHandler(["Arcade", 9])}
           >
             <img src={Arcade} alt="" />
-            <div className="mt-12 flex flex-col gap-1">
+            <div className="md:mt-8 flex flex-col gap-1">
               <h2>Arcade</h2>
               <span>{option ? "$9/mo" : "$90/mo"}</span>
               {!option && <h5>2 months free</h5>}
@@ -40,7 +40,7 @@ const Plan = () => {
             onClick={() => planSelectionHandler(["Advanced", 12])}
           >
             <img src={Advanced} alt="" />
-            <div className="mt-12 flex flex-col gap-1">
+            <div className="md:mt-8 flex flex-col gap-1">
               <h2>Advanced</h2>
               <span>{option ? "$12/mo" : "$120/yr"}</span>
               {!option && <h5>2 months free</h5>}
@@ -51,7 +51,7 @@ const Plan = () => {
             onClick={() => planSelectionHandler(["Pro", 15])}
           >
             <img src={Pro} alt="" />
-            <div className="mt-12 flex flex-col gap-1">
+            <div className="md:mt-8 flex flex-col gap-1">
               <h2>Pro</h2>
               <span>{option ? "$15/mo" : "$150/yr"}</span>
               {!option && <h5>2 months free</h5>}
@@ -85,16 +85,16 @@ const Plan = () => {
             Yearly
           </h2>
         </div>
-        <div className="flex flex-row justify-between">
-          <Link to="/personal">
-            <SecondaryBtn>Go Back</SecondaryBtn>
-          </Link>
-          <Link to="/add-ons">
-            <PrimaryBtn disabled={selectedPlan.length === 0}>
-              Next Step
-            </PrimaryBtn>
-          </Link>
-        </div>
+      </div>
+      <div className="flex flex-row justify-between mt-20 pb-8 mx-[4%]">
+        <Link to="/personal">
+          <SecondaryBtn>Go Back</SecondaryBtn>
+        </Link>
+        <Link to="/add-ons">
+          <PrimaryBtn disabled={selectedPlan.length === 0}>
+            Next Step
+          </PrimaryBtn>
+        </Link>
       </div>
     </section>
   );

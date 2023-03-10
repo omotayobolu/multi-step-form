@@ -3,14 +3,14 @@ import { Outlet, NavLink } from "react-router-dom";
 
 const App = () => {
   return (
-    <section className="bg-white p-[1%] flex flex-row items-start h-screen">
+    <section className="bg-white lg:p-[1%] flex lg:flex-row flex-col items-start h-screen overflow-auto">
       <div
         id="sidebar"
-        className="w-[50%] h-full bg-SideBgDesktop bg-no-repeat bg-contain bg-left"
+        className="lg:w-[50%] w-full h-full bg-Magnolia bg-SideBgMobile lg:bg-SideBgDesktop bg-no-repeat bg-cover lg:bg-left bg-top "
       >
         <div className=" w-full h-full">
           <nav className="p-[7%]">
-            <ul className="flex flex-col gap-10">
+            <ul className="flex lg:flex-col flex-row md:gap-10 gap-4 justify-center">
               <li>
                 <NavLink
                   to={`/personal`}
@@ -56,7 +56,7 @@ const App = () => {
           </nav>
         </div>
       </div>
-      <div className="w-full h-full relative mx-[10%] py-[3%]">
+      <div className="w-full h-full relative lg:mx-[10%] py-[3%] lg:bg-white bg-Magnolia ">
         <Outlet />
       </div>
     </section>

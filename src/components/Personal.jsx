@@ -55,7 +55,7 @@ const Personal = () => {
 
   return (
     <section id="personal">
-      <div>
+      <div className="bg-white lg:m-0 lg:p-0 lg:drop-shadow-none md:mt-[-40%] mt-[-60%] mx-[4%] p-[5%] rounded-lg drop-shadow-xl z-10">
         <h1>Personal info</h1>
         <p className="pt-3">
           Please provide your name, email address and phone number.
@@ -95,11 +95,13 @@ const Personal = () => {
             pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
             placeholder="e.g. +1 234 567 890"
           />
-          <Link to="/plans">
-            <PrimaryBtn disabled={!formIsValid}>Next Step</PrimaryBtn>
-          </Link>
         </form>
       </div>
+      <Link to="/plans">
+        <PrimaryBtn className="mt-8 mr-2" disabled={!formIsValid}>
+          Next Step
+        </PrimaryBtn>
+      </Link>
     </section>
   );
 };

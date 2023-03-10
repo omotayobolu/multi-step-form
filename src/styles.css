@@ -32,11 +32,11 @@
   }
 
   h1 {
-    @apply text-4xl font-bold text-Marine_blue;
+    @apply lg:text-4xl text-3xl font-bold text-Marine_blue;
   }
 
   h2 {
-    @apply text-xl font-bold text-Marine_blue;
+    @apply md:text-xl text-lg font-bold text-Marine_blue;
   }
 
   h5 {
@@ -44,12 +44,12 @@
   }
 
   p {
-    @apply lg:text-lg font-normal text-Cool_gray text-base;
+    @apply md:text-xl font-normal text-Cool_gray text-lg;
   }
 
   input[type="checkbox"] {
     -webkit-appearance: none;
-    @apply h-5 w-5 cursor-pointer border border-Light_gray rounded-md;
+    @apply h-6 md:w-6 w-7 cursor-pointer border border-Light_gray rounded-md;
   }
 
   input[type="checkbox"]:checked {
@@ -58,11 +58,15 @@
 }
 @layer components {
   .link {
-    @apply flex flex-row items-center gap-4;
+    @apply flex flex-row items-center gap-4 pointer-events-none;
   }
 
   .link.active span {
     @apply text-Marine_blue bg-Light_blue border-none;
+  }
+
+  .link div {
+    @apply md:block hidden;
   }
 
   .link span {
@@ -78,7 +82,7 @@
   }
 
   .select-plan {
-    @apply text-left rounded-lg p-4 border border-Light_gray bg-transparent w-full cursor-pointer focus:border-Purplish_blue focus:bg-Magnolia;
+    @apply flex flex-row md:flex-col items-start gap-4 text-left rounded-lg p-4 border border-Light_gray bg-transparent w-full cursor-pointer focus:border-Purplish_blue focus:bg-Magnolia;
   }
 
   .select-plan span {

@@ -20,6 +20,7 @@ module.exports = {
       },
       backgroundImage: {
         SideBgDesktop: "url('/src/assets/images/bg-sidebar-desktop.svg')",
+        SideBgMobile: "url('/src/assets/images/bg-sidebar-mobile.svg')",
         tick: "url('/src/assets/images/icon-checkmark.svg')",
       },
     },

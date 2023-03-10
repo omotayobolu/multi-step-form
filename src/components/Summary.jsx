@@ -37,7 +37,7 @@ const Summary = () => {
       {completeForm ? (
         <Confirm />
       ) : (
-        <div>
+        <div className="bg-white drop-shadow-2xl lg:drop-shadow-none lg:m-0 lg:p-0  md:mt-[-40%] mt-[-15%] mx-[4%] p-[5%] rounded-lg z-10">
           <h1>Finishing Up</h1>
           <p className="pt-3">
             Double-check everything looks OK before confirming
@@ -101,23 +101,25 @@ const Summary = () => {
             <span className="text-lg text-Cool_gray font-medium">
               Total({option ? "per month" : "per year"})
             </span>
-            <h1 className="text-Purplish_blue text-3xl">
+            <h1 className="text-Purplish_blue lg:text-3xl md:text-2xl text-xl">
               ${total}
               {option ? "/mo" : "/yr"}
             </h1>
           </div>
-          <div className="flex flex-row justify-between">
-            <Link to="/add-ons">
-              <SecondaryBtn>Go Back</SecondaryBtn>
-            </Link>
-            <PrimaryBtn
-              onClick={() => setCompleteForm(true)}
-              disabled={!formIsCompleted}
-              className="bg-Purplish_blue rounded-md hover:opacity-80 "
-            >
-              Confirm
-            </PrimaryBtn>
-          </div>
+        </div>
+      )}
+      {!completeForm && (
+        <div className="flex flex-row justify-between mx-[4%] mt-10 pb-8">
+          <Link to="/add-ons">
+            <SecondaryBtn>Go Back</SecondaryBtn>
+          </Link>
+          <PrimaryBtn
+            onClick={() => setCompleteForm(true)}
+            disabled={!formIsCompleted}
+            className="bg-Purplish_blue rounded-md hover:opacity-80 "
+          >
+            Confirm
+          </PrimaryBtn>
         </div>
       )}
     </section>

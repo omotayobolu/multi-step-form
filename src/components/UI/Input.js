@@ -4,7 +4,10 @@ const Input = (props) => {
   return (
     <div className="flex flex-col gap-1">
       <div className="flex flex-row items-center justify-between">
-        <label html={props.id} className="text-Marine_blue font-medium text-lg">
+        <label
+          html={props.id}
+          className="text-Marine_blue font-medium md:text-xl text-lg"
+        >
           {props.label}
         </label>
         {props.error && (
@@ -21,7 +24,7 @@ const Input = (props) => {
         onChange={props.onChange}
         onBlur={props.onBlur}
         pattern={props.pattern}
-        className={`py-2 px-4 border text-Marine_blue font-medium text-lg border-Light_gray rounded-lg focus:border-Purplish_blue ${
+        className={`py-2 px-4 border text-Marine_blue font-medium md:text-xl text-lg border-Light_gray rounded-lg focus:border-Purplish_blue ${
           props.error && "border-Strawberry_red"
         }`}
       />

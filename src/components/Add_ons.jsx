@@ -16,7 +16,7 @@ const Add_ons = () => {
   } = useContext(FormContext);
   return (
     <section id="add_ons">
-      <div>
+      <div className="bg-white lg:p-0 p-[5%] lg:m-0 mx-[4%] md:mt-[-40%] mt-[-5%] rounded-lg z-10">
         <h1>Pick add-ons</h1>
         <p className="pt-3">Add-ons enhance your gaming experience.</p>
         <div className="mt-8 flex flex-col gap-4">
@@ -28,13 +28,13 @@ const Add_ons = () => {
               setOnlineServiceChecked((prevChecked) => !prevChecked)
             }
           >
-            <div className="flex items-center gap-10">
+            <div className="flex items-center justify-between lg:gap-10 gap-4">
               <input
                 type="checkbox"
                 id="Online Service"
                 checked={onlineServiceChecked}
               />
-              <label className="flex flex-col gap-1">
+              <label className="flex flex-col md:gap-1">
                 <h2>Online Service</h2>
                 <p>Access to multiplayer games.</p>
               </label>
@@ -51,9 +51,9 @@ const Add_ons = () => {
               setLargerStoragCheceked((prevChecked) => !prevChecked)
             }
           >
-            <div className="flex items-center gap-10">
+            <div className="flex items-center  lg:gap-10 gap-4">
               <input type="checkbox" id="" checked={largerStorageChecked} />
-              <label className="flex flex-col gap-1">
+              <label className="flex flex-col md:gap-1">
                 <h2>Larger Storage</h2>
                 <p>Extra 1TB of cloud save.</p>
               </label>
@@ -70,13 +70,13 @@ const Add_ons = () => {
               setCustomizableProfileChecked((prevChecked) => !prevChecked)
             }
           >
-            <div className="flex items-center gap-10">
+            <div className="flex items-center lg:gap-10 gap-4">
               <input
                 type="checkbox"
                 id=""
                 checked={customizableProfileChecked}
               />
-              <label className="flex flex-col gap-1">
+              <label className="flex flex-col md:gap-1">
                 <h2>Customizable Profile</h2>
                 <p>Customize on your profile.</p>
               </label>
@@ -86,14 +86,14 @@ const Add_ons = () => {
             </h5>
           </div>
         </div>
-        <div className="flex flex-row justify-between">
-          <Link to="/plans">
-            <SecondaryBtn>Go Back</SecondaryBtn>
-          </Link>
-          <Link to="/summary">
-            <PrimaryBtn>Next Step</PrimaryBtn>
-          </Link>
-        </div>
+      </div>
+      <div className="flex flex-row justify-between mx-[4%] my-20 pb-8">
+        <Link to="/plans">
+          <SecondaryBtn>Go Back</SecondaryBtn>
+        </Link>
+        <Link to="/summary">
+          <PrimaryBtn>Next Step</PrimaryBtn>
+        </Link>
       </div>
     </section>
   );
