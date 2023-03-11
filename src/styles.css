@@ -82,7 +82,7 @@
   }
 
   .select-plan {
-    @apply flex flex-row md:flex-col items-start gap-4 text-left rounded-lg p-4 border border-Light_gray bg-transparent w-full cursor-pointer focus:border-Purplish_blue focus:bg-Magnolia;
+    @apply flex flex-row md:flex-col items-start gap-4 text-left rounded-lg p-4 border border-Light_gray bg-transparent w-full cursor-pointer focus:border-Purplish_blue focus:bg-Magnolia hover:border-Purplish_blue;
   }
 
   .select-plan span {
@@ -90,7 +90,7 @@
   }
 
   .add-ons {
-    @apply border border-Light_gray rounded-lg w-full flex flex-row items-center justify-between p-5 cursor-pointer;
+    @apply border border-Light_gray rounded-lg w-full flex flex-row items-center justify-between p-5 cursor-pointer hover:border-Purplish_blue;
   }
 
   .add-ons p {

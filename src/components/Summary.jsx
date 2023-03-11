@@ -49,7 +49,7 @@ const Summary = () => {
                   {selectedPlan[0]} ({option ? "Monthly" : "Yearly"})
                 </h2>
                 <span
-                  className="text-Cool_gray underline cursor-pointer"
+                  className="text-Cool_gray underline cursor-pointer hover:text-Purplish_blue "
                   onClick={changeOption}
                 >
                   Change
